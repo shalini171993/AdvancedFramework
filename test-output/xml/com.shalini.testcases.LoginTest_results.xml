@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Test1"
+           tests="2"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="0.062">
+  <properties />
+  
+  
+            <testcase name="login" time="0.040" classname="com.shalini.testcases.LoginTest" />
+                <testcase name="checkManagerButton" time="0.022" classname="com.shalini.testcases.LoginTest" />
+      
+</testsuite>
