@@ -3,6 +3,7 @@ com\shalini\utilities\ExtentReportManager.class
 com\shalini\testcases\LoginTest.class
 com\shalini\listeners\CustomListener.class
 com\shalini\rough\TestProperties.class
+com\shalini\listeners\AllureListener.class
 com\shalini\testcases\AddCustomerTest.class
 com\shalini\utilities\ExcelReader.class
 com\shalini\base\TestBase.class

@@ -6,6 +6,7 @@
         <listener class-name="org.uncommons.reportng.HTMLReporter"></listener>
         <listener class-name="org.uncommons.reportng.JUnitXMLReporter"></listener>
         <listener class-name="com.shalini.listeners.CustomListener"></listener>
+        <listener class-name="com.shalini.listeners.AllureListener"></listener>
 
     </listeners>
     <test name="Test1">
