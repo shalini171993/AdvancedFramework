@@ -3,6 +3,7 @@ package com.shalini.testcases;
 import com.shalini.base.TestBase;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.testng.Reporter;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -23,6 +24,8 @@ public class AddCustomerTest extends TestBase {
 
         Alert alert = driver.switchTo().alert();
         alert.accept();*/
+        Reporter.log("====Test 3,4 completed=====");
+
     }
 
     @DataProvider
