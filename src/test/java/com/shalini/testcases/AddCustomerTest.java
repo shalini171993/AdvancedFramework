@@ -12,17 +12,17 @@ public class AddCustomerTest extends TestBase {
 
     @Test(dataProvider = "getData")
     public void addCustomerDetails(String fname,String lname,String postCode) throws InterruptedException {
-        driver.findElement(By.cssSelector(objectRepoProperties.getProperty("managerLoginBtn"))).click();
-        Thread.sleep(3000);
+     /*   driver.findElement(By.cssSelector(objectRepoProperties.getProperty("managerLoginBtn"))).click();
+        Thread.sleep(3000);*/
         driver.findElement(By.cssSelector(objectRepoProperties.getProperty("addCustomerBtn"))).click();
         Thread.sleep(3000);
-        driver.findElement(By.cssSelector(objectRepoProperties.getProperty("firstName"))).sendKeys(fname);
+       /* driver.findElement(By.cssSelector(objectRepoProperties.getProperty("firstName"))).sendKeys(fname);
         driver.findElement(By.cssSelector(objectRepoProperties.getProperty("lastName"))).sendKeys(lname);
         driver.findElement(By.cssSelector(objectRepoProperties.getProperty("postCode"))).sendKeys(postCode);
         driver.findElement(By.cssSelector(objectRepoProperties.getProperty("addButton"))).click();
 
         Alert alert = driver.switchTo().alert();
-        alert.accept();
+        alert.accept();*/
     }
 
     @DataProvider
