@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Test1"
+<testsuite name="TestClass1"
            tests="2"
            failures="0"
            errors="0"
            skipped="0"
-           time="0.092">
+           time="0.316">
   <properties />
   
   
-            <testcase name="login" time="0.047" classname="com.shalini.testcases.LoginTest" />
-                <testcase name="checkManagerButton" time="0.045" classname="com.shalini.testcases.LoginTest" />
+            <testcase name="checkManagerButton" time="0.067" classname="com.shalini.testcases.LoginTest" />
+                <testcase name="login" time="0.249" classname="com.shalini.testcases.LoginTest" />
       
 </testsuite>

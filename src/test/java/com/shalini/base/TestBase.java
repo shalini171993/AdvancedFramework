@@ -30,6 +30,7 @@ public class TestBase {
 
     public ExtentReports reportManager = ExtentReportManager.getInstance();
     public static ExtentTest test;
+    public static String browser;
     @BeforeSuite
     public void setUp() throws IOException {
 
@@ -44,13 +45,23 @@ public class TestBase {
 
         }
 
+        if(System.getenv("browser") !=null && !System.getenv("browser").isEmpty()){
+            browser = System.getenv("browser");
+        }
+
+        else{
+            browser = configProperties.getProperty("browser");
+        }
+
+        configProperties.setProperty("browser",browser);
+
         if(configProperties.getProperty("browser").equalsIgnoreCase("chrome")){
             System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"\\src\\test\\resources\\executebles\\chromedriver.exe");
             driver = new ChromeDriver();
         }
 
         else if(configProperties.getProperty("browser").equalsIgnoreCase("firefox")){
-            System.setProperty("webdriver.gecko.driver",System.getProperty("user.dir")+"\\src\\test\\resources\\executables\\geckodriver.exe");
+            System.setProperty("webdriver.gecko.driver",System.getProperty("user.dir")+"\\src\\test\\resources\\executebles\\geckodriver.exe");
             driver = new FirefoxDriver();
         }
 

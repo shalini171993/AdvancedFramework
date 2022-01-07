@@ -9,12 +9,12 @@
         <listener class-name="com.shalini.listeners.AllureListener"></listener>
 
     </listeners>
-    <test name="Test1">
+    <test name="TestClass1">
         <classes>
             <class name="com.shalini.testcases.LoginTest"/>
         </classes>
     </test> <!-- Test -->
-    <test name="Test2">
+    <test name="TestClass2">
         <classes>
             <class name="com.shalini.testcases.AddCustomerTest"/>
         </classes>
