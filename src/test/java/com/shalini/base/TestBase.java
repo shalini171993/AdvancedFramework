@@ -45,14 +45,12 @@ public class TestBase {
 
         }
 
-        //if(configProperties.getProperty("browser").equalsIgnoreCase("chrome")){
-        if(browser.equalsIgnoreCase("Chrome")){
+        if(configProperties.getProperty("browser").equalsIgnoreCase("chrome")){
             System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"\\src\\test\\resources\\executebles\\chromedriver.exe");
             driver = new ChromeDriver();
         }
 
-        //else if(configProperties.getProperty("browser").equalsIgnoreCase("firefox")){
-        else if(browser.equalsIgnoreCase("Firefox")){
+        else if(configProperties.getProperty("browser").equalsIgnoreCase("firefox")){
             System.setProperty("webdriver.gecko.driver",System.getProperty("user.dir")+"\\src\\test\\resources\\executables\\geckodriver.exe");
             driver = new FirefoxDriver();
         }

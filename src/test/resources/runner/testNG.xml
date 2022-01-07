@@ -9,7 +9,6 @@
         <listener class-name="com.shalini.listeners.AllureListener"></listener>
 
     </listeners>
-    <parameter name="browser" value="${browserName}"></parameter>
     <test name="TestClass1">
         <classes>
             <class name="com.shalini.testcases.LoginTest"/>
