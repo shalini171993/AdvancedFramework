@@ -31,8 +31,7 @@ public class TestBase {
     public ExtentReports reportManager = ExtentReportManager.getInstance();
     public static ExtentTest test;
     @BeforeSuite
-    @Parameters({"browser"})
-    public void setUp(String browser) throws IOException {
+    public void setUp() throws IOException {
 
         if(driver==null){
             fis = new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\resources\\properties\\config.properties");
