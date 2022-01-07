@@ -16,6 +16,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 import org.apache.log4j.*;
+import org.testng.annotations.Parameters;
+
 public class TestBase {
 
 
@@ -29,7 +31,8 @@ public class TestBase {
     public ExtentReports reportManager = ExtentReportManager.getInstance();
     public static ExtentTest test;
     @BeforeSuite
-    public void setUp() throws IOException {
+    @Parameters({"browser"})
+    public void setUp(String browser) throws IOException {
 
         if(driver==null){
             fis = new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\resources\\properties\\config.properties");
@@ -42,12 +45,14 @@ public class TestBase {
 
         }
 
-        if(configProperties.getProperty("browser").equalsIgnoreCase("chrome")){
+        //if(configProperties.getProperty("browser").equalsIgnoreCase("chrome")){
+        if(browser.equalsIgnoreCase("Chrome")){
             System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"\\src\\test\\resources\\executebles\\chromedriver.exe");
             driver = new ChromeDriver();
         }
 
-        else if(configProperties.getProperty("browser").equalsIgnoreCase("firefox")){
+        //else if(configProperties.getProperty("browser").equalsIgnoreCase("firefox")){
+        else if(browser.equalsIgnoreCase("Firefox")){
             System.setProperty("webdriver.gecko.driver",System.getProperty("user.dir")+"\\src\\test\\resources\\executables\\geckodriver.exe");
             driver = new FirefoxDriver();
         }
