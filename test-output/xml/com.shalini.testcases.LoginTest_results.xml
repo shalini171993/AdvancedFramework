@@ -4,11 +4,11 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="0.316">
+           time="0.458">
   <properties />
   
   
-            <testcase name="checkManagerButton" time="0.067" classname="com.shalini.testcases.LoginTest" />
-                <testcase name="login" time="0.249" classname="com.shalini.testcases.LoginTest" />
+            <testcase name="checkManagerButton" time="0.132" classname="com.shalini.testcases.LoginTest" />
+                <testcase name="login" time="0.326" classname="com.shalini.testcases.LoginTest" />
       
 </testsuite>

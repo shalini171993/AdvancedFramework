@@ -4,11 +4,11 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="6.497">
+           time="6.492">
   <properties />
   
   
-            <testcase name="addCustomerDetails" time="3.255" classname="com.shalini.testcases.AddCustomerTest" />
-                <testcase name="addCustomerDetails" time="3.242" classname="com.shalini.testcases.AddCustomerTest" />
+            <testcase name="addCustomerDetails" time="3.309" classname="com.shalini.testcases.AddCustomerTest" />
+                <testcase name="addCustomerDetails" time="3.183" classname="com.shalini.testcases.AddCustomerTest" />
       
 </testsuite>

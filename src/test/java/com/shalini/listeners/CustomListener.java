@@ -2,15 +2,17 @@ package com.shalini.listeners;
 
 import com.relevantcodes.extentreports.LogStatus;
 import com.shalini.base.TestBase;
+import com.shalini.utilities.MonitoringMail;
+import com.shalini.utilities.TestConfig;
 import com.shalini.utilities.Utils;
-import org.testng.ITestContext;
-import org.testng.ITestListener;
-import org.testng.ITestResult;
-import org.testng.Reporter;
+import org.testng.*;
 
+import javax.mail.MessagingException;
 import java.io.IOException;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 
-public class CustomListener extends TestBase implements ITestListener {
+public class CustomListener extends TestBase implements ITestListener, ISuiteListener {
     @Override
     public void onTestStart(ITestResult result) {
         test =reportManager.startTest(result.getName().toUpperCase());
@@ -65,6 +67,27 @@ public class CustomListener extends TestBase implements ITestListener {
 
     @Override
     public void onFinish(ITestContext context) {
+
+    }
+
+    @Override
+    public void onStart(ISuite suite) {
+        String ip = null;
+        try {
+            ip = "http//:"+ InetAddress.getLocalHost().getHostAddress()+":8080/job/Selenium_Maven/Extent_20Report/";
+        } catch (UnknownHostException e) {
+            e.printStackTrace();
+        }
+        MonitoringMail mail = new MonitoringMail();
+        try {
+            mail.sendMail(TestConfig.server,TestConfig.from,TestConfig.to,TestConfig.subject,ip);
+        } catch (MessagingException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void onFinish(ISuite suite) {
 
     }
 }
